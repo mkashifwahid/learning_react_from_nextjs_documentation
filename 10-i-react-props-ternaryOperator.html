@@ -1,0 +1,39 @@
+<html>
+  <head> </head>
+  <body>
+    <div id="unique">
+      <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      <script type="text/jsx">
+          const unique_div = document.getElementById('unique');
+
+          function createTitle(title){
+            if (title){
+                return title;
+            }
+            else {
+                return 'No title, thats why default title'
+            }
+          }
+
+          function Header({title}){
+            console.log(title);
+            //enter in javascript land while in currently in JSX land with curly braces{}
+            return (<h1>{title?title:'No title, thats why default title!!!'}</h1>);
+        }
+
+
+          function Homepage(){
+              return(<div>
+
+                    <Header title="React Title as props with return value of a function. !!!" />
+                    <Header title="" />
+                    <Header />
+              </div>)
+          }
+          ReactDOM.render(<Homepage />, unique_div);
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+  <head> </head>
+  <body>
+    <div id="unique">
+      <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      <script type="text/jsx">
+        const unique_div = document.getElementById('unique');
+
+        function Header(){
+            return (<h1>This is h1 heading tag as a react component inside homepage component...</h1>);
+        }
+        function Homepage(){
+            return(<div>
+                <Header />
+            </div>)
+        }
+        ReactDOM.render(<Homepage />, unique_div);
+      </script>
+    </div>
+  </body>
+</html>
