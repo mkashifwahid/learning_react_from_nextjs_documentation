@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <script type="text/jsx">
+
+         function Header({title}){
+              return (<h1>{title}</h1>);
+          }
+
+          function HomePage(){
+              const birds= ["Eagle", "Parrot", "Pegion", "Hen", "Crow"]
+              function likeClickHandler(){
+                console.log(birds)
+              }
+              return(
+                <div>
+                  <Header title="Lets Shows Bird Name" />
+                  <ul>
+                    {birds.map((b)=>(
+                        <li key={b}>{b}</li>
+
+                    )
+
+                    )
+
+                    }
+                  </ul>
+                  <button onClick={likeClickHandler}>Like.</button>
+                </div>
+              )
+          }
+        ReactDOM.render(<HomePage/>, app)
+      </script>
+    </div>
+  </body>
+</html>
