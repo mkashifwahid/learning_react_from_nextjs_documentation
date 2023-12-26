@@ -1,35 +1,32 @@
 <html>
-  <head> </head>
+  <head></head>
   <body>
     <div id="app">
       <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
       <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
       <script type="text/jsx">
-
         function Header({title}){
-          return (<h1>{title} </h1>)
+          return <h1>{title}</h1>
         }
 
         function HomePage(){
-          const names = ['ali', 'ahmed', 'raza', 'afaq'];
-          return (
-            <div>
-              <Header  title="Presenting Names List"/>
-              <ul>
-                {
-                  names.map((n)=>(
-                    <li key={n}>{n}</li>
-                  )
+          const animals = ['Lion', 'Monkey', 'Tiger', 'Elephant', 'Zebra', 'Cat', 'Dog', 'Horse']
+          return(
+          <div>
+            <Header title="Presenting again animal list" />
+            <ul>
+              {animals.map((n) => (
+                <li key={n}>{n}</li>
+              )
 
-                  )
-                }
-              </ul>
-            </div>
+              )
 
-          );
+              }
+            </ul>
+          </div>
+          )
         }
-
         ReactDOM.render(<HomePage />, app)
       </script>
     </div>
